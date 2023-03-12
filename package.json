@@ -2,6 +2,7 @@
   "name": "bee4-prova-logica",
   "version": "1.0.0",
   "description": "## Introdução",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev:tarefa1": "tsx watch TAREFA1/Program.ts",
