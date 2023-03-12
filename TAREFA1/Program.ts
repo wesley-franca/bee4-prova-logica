@@ -12,12 +12,12 @@ async function DoublePopulation(data: string[]): Promise<List[]> {
   const newData = data.map(line => {
     if (typeof (line) !== "string") return line;
 
-    let newLine = line.split("; ") as List;
+    let [city, population] = line.split("; ") as List;
 
-    if (!isNaN(-newLine[1])) {
-      newLine[1] = Number(newLine[1]) * 2;
+    if (!isNaN(-population)) {
+      population = Number(population) * 2;
     }
-    return newLine;
+    return [city, population];
   })
 
   return newData;
