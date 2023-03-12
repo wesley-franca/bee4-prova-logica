@@ -1,36 +1,47 @@
 import { promises as fs } from "fs";
 
+type List = (string | number)[];
+
 async function GetData(file: string): Promise<string[]> {
   const data = await fs.readFile(file);
 
   return Buffer.from(data).toString().replace(new RegExp('"', 'g'), '').split(/\r?\n/);
 }
 
-type List = (string | number)[]
+async function DoublePopulation(data: string[]): Promise<List[]> {
+  const newData = data.map(line => {
+    if (typeof (line) !== "string") return line;
 
-async function DoublePopulation() {
-  const data = await GetData("mapa.csv");
+    let newLine = line.split("; ") as List;
 
-  const newData = data.map((line) => {
-    let newLine;
-    if (typeof (line) === "string") {
-      newLine = line.split("; ") as List;
-
-      if (!isNaN(Number(newLine[1]))) {
-        newLine[1] = Number(newLine[1]) * 2
-      }
-      return newLine
+    if (!isNaN(-newLine[1])) {
+      newLine[1] = Number(newLine[1]) * 2;
     }
+    return newLine;
   })
+
+  return newData;
 }
 
+async function CreateCSV(data: List[]): Promise<void> {
+  const table = data.map(line => {
+    return line.join("; ");
+  })
 
+  const fullText = table.join('\n');
 
+  try {
+    await fs.writeFile('TAREFA1/answer.csv', fullText);
+    console.log('Arquivo CSV salvo com sucesso!');
+  } catch (err) {
+    console.error('Erro ao salvar arquivo CSV:', err);
+  }
+}
 
+async function Challenge1() {
+  const data = await GetData("mapa.csv");
+  const doubledPopulation = await DoublePopulation(data);
+  await CreateCSV(doubledPopulation);
+}
 
-
-//TODO: transformar array em um arquivo mais uma vez
-
-//TODO: salvar um novo arquivo com as alterações em "TAREFA1"
-
-DoublePopulation()
+Challenge1()
