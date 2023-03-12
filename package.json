@@ -4,9 +4,14 @@
   "description": "## Introdução",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev:tarefa1": "tsx watch TAREFA1/Program.ts",
+    "dev:tarefa2": "tsx watch TAREFA2/Program.ts",
+    "dev:tarefa3": "tsx watch TAREFA3/Program.ts",
     "build": "tsc",
-    "start": "node dist/index.ts"
+    "run:tarefa1": "node dist/TAREFA1/Program.js",
+    "run:tarefa2": "node dist/TAREFA2/Program.js",
+    "run:tarefa3": "node dist/TAREFA3/Program.js",
+    "start": "node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +25,7 @@
   },
   "homepage": "https://github.com/wesley-franca/bee4-prova-logica#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
