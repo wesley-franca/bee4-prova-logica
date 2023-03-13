@@ -1,16 +1,46 @@
 # Teste prático - Lógica
 
-## Introdução
+## Como rodar:
 
-Este é um teste que aplicamos na seleção de novos desenvolvedores.
+Clone o repositorio na sua maquina:
 
-Faça um fork desse repositório e acrescente o código. Crie uma pasta para cada solução. Depois disso nos passe o endereço do seu repositório no github para verificação.
+```
+git clone https://github.com/wesley-franca/bee4-prova-logica.git
+```
 
-Você pode utilizar as seguintes linguagens pra resolução dos problemas: Node, Java, CSharp, Javascript, C ou Python
+Navegue para a pasta do projeto:
 
-## Escopo
+```
+cd bee4-prova-logica/
+```
 
-Realize as seguintes tarefas:
+Instale as dependencias necessarias:
+
+```
+npm i
+```
+
+Faça o build:
+
+```
+npm run build
+```
+
+Nesse ponto você pode rodar os comandos:
+
+```
+npm run start:tarefa1
+```
+```
+npm run start:tarefa2
+```
+```
+npm run start:tarefa3
+```
+
+Que irão gerar o arquivo answer.csv nas respectivas pastas TAREFA1, TAREFA2 e TAREFA3 com a solução dos seguintes exercicios propostos.
+
+
 
 1 - Crie um programa que multiplique a coluna _"População no último censo"_ do arquivo _"mapa.csv"_ por 2 e grave uma cópia do arquivo alterado.
 
@@ -24,24 +54,17 @@ Estrutura da solução (PASTAS):
 
 ```
     TAREFA1
-        Program.cs (ou arquivos da linguagem escolhida)
+        answer.csv
+        Program.ts
     TAREFA2
-        Program.cs (ou arquivos da linguagem escolhida)
+        answer.csv
+        Program.ts
     TAREFA3
-        Program.cs (ou arquivos da linguagem escolhida)
+        answer.csv
+        Program.ts
 ```
 
-O que avaliamos:
-
-- Qualidade de código
-- Código limpo
-- Simplicidade
-- Lógica de programação
-- Conceitos de orientação a objetos
-- Otimização do código implementado
-- Organização e padrão de Commits
 
 ## Dúvidas
 
-Fique a vontade para nos procurar, o RH vai mandar o contato para dúvidas
-Nos diga o que achou do teste
+Fique a vontade para me procurar via e-mail, Whatsapp ou LinkedIn em caso de duvidas.
