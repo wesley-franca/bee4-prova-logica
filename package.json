@@ -9,10 +9,9 @@
     "dev:tarefa2": "tsx watch TAREFA2/Program.ts",
     "dev:tarefa3": "tsx watch TAREFA3/Program.ts",
     "build": "tsc",
-    "run:tarefa1": "node dist/TAREFA1/Program.js",
-    "run:tarefa2": "node dist/TAREFA2/Program.js",
-    "run:tarefa3": "node dist/TAREFA3/Program.js",
-    "start": "node dist/index.js"
+    "start:tarefa1": "node dist/TAREFA1/Program.js",
+    "start:tarefa2": "node dist/TAREFA2/Program.js",
+    "start:tarefa3": "node dist/TAREFA3/Program.js"
   },
   "repository": {
     "type": "git",
@@ -26,12 +25,11 @@
   },
   "homepage": "https://github.com/wesley-franca/bee4-prova-logica#readme",
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.13",
-    "@types/express": "^4.17.17",
-    "@types/node": "^18.15.0",
+    "@types/node": "^18.15.2",
     "tsx": "^3.12.3",
     "typescript": "^4.9.5"
   }
